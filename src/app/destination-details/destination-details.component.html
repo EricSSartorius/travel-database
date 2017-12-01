@@ -1,0 +1,8 @@
+<div *ngIf="destination" class="destination-details">
+  <h1>{{ destination.country | uppercase }}</h1>
+  <h3 *ngIf="destination.rating" [style.color]="destination.rating === 100 ? 'green' : 'black'">
+    <span>Rating: </span>{{ destination.rating }}
+  </h3>
+  <p *ngIf="destination.status">({{ destination.status }})</p>
+  <button (click)="goBack()">Back</button>
+</div>

@@ -1,0 +1,23 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 10px;
+}
+
+.destination-container {
+  background: #3fa0e1;
+  border-radius: 3px;
+  padding: 1em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  display: block;
+  color: #fff;
+}
+
+.destination-container:hover {
+  background: #3fa0e1 - 20;
+}
+
+.col {
+  padding: .4em 1.3em;
+}

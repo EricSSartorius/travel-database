@@ -1,0 +1,10 @@
+<h2>You've been to {{ destinationCount }} countries!</h2>
+
+<input [(ngModel)]="searchText" type="text" placeholder="Search...">
+
+<ul>
+  <li *ngFor="let destination of destinations | filter : searchText; let i = index" class="destination-single">
+    <a routerLink="/destination/{{destination.id}}">{{ i + 1 }}. {{ destination.country }}</a>
+    <button class="delete" title="delete destination" (click)="delete(destination)">x</button>
+  </li>
+</ul>

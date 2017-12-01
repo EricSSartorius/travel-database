@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="col">
+    <app-destination-form></app-destination-form>
+  </div>
+
+  <div class="col">
+    <h2>Recently Visited</h2>
+    <a routerLink="/destination/{{destination.id}}" *ngFor="let destination of destinations" class="destination-container">
+      {{ destination.country }} <span *ngIf="destination.rating">({{ destination.rating }}/100)</span>
+    </a>
+  </div>
+</div>
+
+

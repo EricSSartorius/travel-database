@@ -1,0 +1,81 @@
+/* Basic Styles */
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+body {
+  font-family: 'Raleway', 'Arial';
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0 0 2em 0;
+  padding: 0;
+}
+
+ul li a {
+  font-size: 1.5em;
+}
+
+a {
+  color: #3e3e3e;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Button Styles */
+button {
+  border: 0;
+  padding: 1em 3em;
+  border-radius: 3px;
+  background: #3fa0e1;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled,
+button:disabled:hover,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  cursor: auto;
+}
+
+button.delete {
+  padding: 2px 7px 3px;
+  margin-left: 1em;
+}
+
+button.back {
+  background: lightgray;
+}
+
+button:hover {
+  background: #3fa0e1 - 20;
+}
+
+button.back:hover {
+  background: lightgray - 20 !important;
+}
+
+/* Form Styles */
+input {
+  border: 1px solid lightgrey;
+  display: block;
+  margin-bottom: 1em;
+}
+input[type=text] {
+  border-radius: 3px;
+  padding: .5em;
+}
+
+select {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.alert {
+  color: red;
+}

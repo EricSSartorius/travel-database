@@ -1,0 +1,19 @@
+<h2>Add a Country</h2>
+
+<form (ngSubmit)="onSubmit()" #destinationForm="ngForm">
+  <label for="country">Country Name</label>
+  <span *ngIf="country.invalid" class="alert">
+    <strong>*required</strong>
+  </span>
+  <input type="text" id="country" required [(ngModel)]="destination.country" name="country" #country="ngModel">
+
+  <label for="status">Status</label>
+  <select id="status" [(ngModel)]="destination.status" name="status">
+    <option *ngFor="let stat of status" [value]="stat">{{ stat }}</option>
+  </select>
+
+  <label for="rating">Rating <span *ngIf="destination.rating || destination.rating === 0" [style.color]="destination.rating === 100 ? 'green' : 'black'">( {{ destination.rating }}/100 )</span></label>
+  <input type="range" id="number" [(ngModel)]="destination.rating" name="rating" min="0" max="100">
+
+  <button type="submit" [disabled]="!destinationForm.form.valid">Submit</button>
+</form>
